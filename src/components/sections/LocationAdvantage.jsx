@@ -22,11 +22,11 @@ export default function LocationAdvantage({ onOpenAudit }) {
             </h2>
 
             <p className="text-base text-slate-700 leading-relaxed">
-              Arvian is your trusted partner for seamless e-commerce management. We are proudly serve as Jaipur's leading e-commerce management agency. We help local and national businesses to scale their business and revenue across various online marketplace. From inventory to marketing, we handle all with precious and professionalism.
+              Novasphere Innovations is your trusted partner for seamless e-commerce management. We proudly serve as Jaipur's leading e-commerce management agency. We help local and national businesses to scale their business and revenue across various online marketplace. From inventory to marketing, we handle all with precision and professionalism.
             </p>
 
             <p className="text-sm text-slate-600 leading-relaxed">
-              Our strategic location in Jaipur allows us to work with all kinds of businesses. We work with manufacturers, wholesalers, D2C brands and help to expand on Amazon, Flipkart, Meesho, JioMart, Shopify, and many more. Work with Arvian and make your e-commerce business huge.
+              Our strategic location in Jaipur allows us to work with all kinds of businesses. We work with manufacturers, wholesalers, D2C brands and help to expand on Amazon, Flipkart, Meesho, JioMart, Shopify, and many more. Work with Novasphere Innovations and make your e-commerce business huge.
             </p>
 
             {/* Serving Cities Grid */}

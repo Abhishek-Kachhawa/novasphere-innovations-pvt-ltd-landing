@@ -50,7 +50,7 @@ export default function AboutUs({ onOpenAudit, onNavigatePortfolio }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center">
           <div className="inline-flex items-center gap-2 bg-blue-950 text-sky-300 border border-blue-800/80 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-sky-400" />
-            ABOUT ARVIAN / NOVASPERE BUSINESS SOLUTIONS
+            ABOUT NOVASPHERE INNOVATIONS
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
@@ -206,7 +206,7 @@ export default function AboutUs({ onOpenAudit, onNavigatePortfolio }) {
           <h2 className="text-2xl sm:text-3xl font-black text-white">Arvind Ajmera — Founder & Director</h2>
 
           <p className="text-xs text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Arvian / Novasphere Business Solutions was founded in 2019 with a simple but powerful belief: Every business deserves access to the expertise, systems, and strategic support required to grow with confidence.
+            Novasphere Innovations Private Limited was founded in 2018 with a simple but powerful belief: Every business deserves access to the expertise, systems, and strategic support required to grow with confidence.
           </p>
 
           <blockquote className="text-lg sm:text-xl font-bold italic text-sky-300 max-w-3xl mx-auto">

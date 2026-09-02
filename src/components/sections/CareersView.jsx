@@ -76,14 +76,14 @@ export default function CareersView() {
     { step: "Step 2", title: "Initial Screening" },
     { step: "Step 3", title: "Interview Round" },
     { step: "Step 4", title: "Final Selection" },
-    { step: "Step 5", title: "Welcome to Arvian" }
+    { step: "Step 5", title: "Welcome to Novasphere" }
   ];
 
   const careerFaqs = [
-    { q: "Where is Arvian / Novasphere Business Solutions located?", a: "Our corporate office is located at C-5, 1st Floor, 80 Feet Road, Kiran Path, Shanthi Nagar, Mansarovar, Jaipur, Rajasthan 302019." },
+    { q: "Where is Novasphere Innovations located?", a: "Our corporate office is located at C-5, 1st Floor, 80 Feet Road, Kiran Path, Shanthi Nagar, Mansarovar, Jaipur, Rajasthan 302019." },
     { q: "Do you offer internships?", a: "Yes! We regularly offer internships in GST & Accounting, Digital Marketing, and eCommerce Operations with full learning & PPO opportunities." },
-    { q: "How can I apply for a job?", a: "You can apply directly by emailing your CV to hr@arvian.in or calling our HR helpline at +91 73000 72440." },
-    { q: "Does Arvian hire freshers?", a: "Yes, we welcome passionate freshers for intern and entry-level marketplace executive roles." }
+    { q: "How can I apply for a job?", a: "You can apply directly by emailing your CV to info@novasphereinnovation.com or calling our HR helpline at +91 92019 47498." },
+    { q: "Does Novasphere hire freshers?", a: "Yes, we welcome passionate freshers for intern and entry-level marketplace executive roles." }
   ];
 
   return (
@@ -94,7 +94,7 @@ export default function CareersView() {
         <div className="max-w-4xl mx-auto px-4 space-y-4">
           <div className="inline-flex items-center gap-2 bg-blue-950 text-sky-300 border border-blue-800/80 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-sky-400" />
-            CAREERS AT ARVIAN / NOVASPHERE
+            CAREERS AT NOVASPHERE INNOVATIONS
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight">
@@ -115,13 +115,13 @@ export default function CareersView() {
         </div>
       </section>
 
-      {/* Why Join Arvian / Novasphere */}
+      {/* Why Join Novasphere Innovations */}
       <section className="py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950">Why Join Us?</h2>
             <p className="text-sm text-slate-600">
-              At Arvian Business Solutions, we believe our people are our greatest asset. When you join us, you become part of a team focused on innovation, collaboration, and continuous learning.
+              At Novasphere Innovations, we believe our people are our greatest asset. When you join us, you become part of a team focused on innovation, collaboration, and continuous learning.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export default function CareersView() {
                   </div>
 
                   <a
-                    href={`mailto:hr@arvian.in?subject=Application for ${job.title}`}
+                    href={`mailto:info@novasphereinnovation.com?subject=Application for ${job.title}`}
                     className="bg-slate-950 hover:bg-blue-900 text-white font-bold text-xs px-6 py-2.5 rounded-xl transition-colors shadow-sm"
                   >
                     Apply Now
@@ -245,13 +245,13 @@ export default function CareersView() {
           <p className="text-sm text-slate-300">Join a company that's helping businesses succeed in the digital marketplace.</p>
           
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-extrabold pt-2">
-            <a href="mailto:hr@arvian.in" className="flex items-center gap-2 text-sky-300 hover:text-white">
+            <a href="mailto:info@novasphereinnovation.com" className="flex items-center gap-2 text-sky-300 hover:text-white">
               <Mail className="w-4 h-4" />
-              <span>hr@arvian.in</span>
+              <span>info@novasphereinnovation.com</span>
             </a>
-            <a href="tel:7300072440" className="flex items-center gap-2 text-sky-300 hover:text-white">
+            <a href="tel:9201947498" className="flex items-center gap-2 text-sky-300 hover:text-white">
               <Phone className="w-4 h-4" />
-              <span>+91 73000 72440</span>
+              <span>+91 92019 47498</span>
             </a>
           </div>
         </div>

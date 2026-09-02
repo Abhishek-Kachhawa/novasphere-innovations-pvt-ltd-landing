@@ -19,11 +19,11 @@ export default function AnnouncementBar({ onOpenAudit }) {
             </a>
 
             <a 
-              href={`tel:${COMPANY_INFO.tollFree.replace(/\s+/g, '')}`} 
+              href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} 
               className="flex items-center gap-1.5 hover:text-sky-300 transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-sky-400" />
-              <span>Toll Free: <strong className="text-white font-bold">{COMPANY_INFO.tollFree}</strong></span>
+              <span>Call Us: <strong className="text-white font-bold">{COMPANY_INFO.phone}</strong></span>
             </a>
 
             <div className="hidden md:flex items-center gap-1.5 text-slate-400">

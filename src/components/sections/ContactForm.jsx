@@ -83,15 +83,15 @@ export default function ContactForm() {
               </a>
 
               <a 
-                href={`tel:${COMPANY_INFO.tollFree.replace(/\s+/g, '')}`} 
+                href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} 
                 className="flex items-center gap-3 text-xs text-slate-800 hover:text-blue-900 transition-colors"
               >
                 <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-900 flex items-center justify-center shrink-0 border border-blue-200">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[10px] text-slate-500 font-semibold uppercase">Toll Free Support</div>
-                  <div className="font-bold">{COMPANY_INFO.tollFree}</div>
+                  <div className="text-[10px] text-slate-500 font-semibold uppercase">Phone Support</div>
+                  <div className="font-bold">{COMPANY_INFO.phone}</div>
                 </div>
               </a>
 
@@ -193,7 +193,7 @@ export default function ContactForm() {
                       <input
                         type="email"
                         required
-                        placeholder="info@arvian.in"
+                        placeholder="info@novasphereinnovation.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-900 focus:outline-none"
@@ -206,7 +206,7 @@ export default function ContactForm() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 63777 09027"
+                        placeholder="+91 92019 47498"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-blue-900 focus:outline-none"

@@ -58,11 +58,11 @@ export default function Footer({ setActiveTab, onOpenAudit, onSelectService }) {
 
             <div className="pt-2 flex flex-col space-y-2 text-xs text-slate-300">
               <a 
-                href={`tel:${COMPANY_INFO.tollFree.replace(/\s+/g, '')}`} 
+                href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} 
                 className="flex items-center gap-2 hover:text-sky-300 transition-colors"
               >
                 <Phone className="w-4 h-4 text-sky-400" />
-                <span>Toll Free: <strong className="text-white">{COMPANY_INFO.tollFree}</strong></span>
+                <span>Call Us: <strong className="text-white">{COMPANY_INFO.phone}</strong></span>
               </a>
               
               <a 

@@ -86,7 +86,7 @@ export default function Navbar({ activeTab, setActiveTab, onOpenAudit, onSelectS
           <a 
             href="#home" 
             onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}
-            className="focus:outline-none"
+            className="focus:outline-none shrink-0"
           >
             <Logo variant="dark" />
           </a>

@@ -14,7 +14,7 @@ export const CASE_STUDIES = [
       { label: "Units Sold", value: "5,407+" },
       { label: "Average Order Value", value: "₹2,815+" }
     ],
-    overview: "Kay Kay Industries is a trusted manufacturer of orthopedic supports, rehabilitation products, mobility aids, and healthcare accessories serving customers across India. To strengthen its digital presence and unlock new growth opportunities, the company partnered with Arvian / Novasphere Business Solutions to accelerate Amazon Marketplace performance. Over a 12-month engagement period, our team implemented a structured growth strategy focused on marketplace management, product listing optimization, A+ Content, PPC advertising, catalog management, inventory planning, and continuous performance monitoring, resulting in sustainable business growth and increased customer reach.",
+    overview: "Kay Kay Industries is a trusted manufacturer of orthopedic supports, rehabilitation products, mobility aids, and healthcare accessories serving customers across India. To strengthen its digital presence and unlock new growth opportunities, the company partnered with Novasphere Innovations to accelerate Amazon Marketplace performance. Over a 12-month engagement period, our team implemented a structured growth strategy focused on marketplace management, product listing optimization, A+ Content, PPC advertising, catalog management, inventory planning, and continuous performance monitoring, resulting in sustainable business growth and increased customer reach.",
     snapshot: [
       { label: "Client", value: "Kay Kay Industries" },
       { label: "Industry", value: "Industrial Products & Healthcare Manufacturing" },
@@ -68,7 +68,7 @@ export const CASE_STUDIES = [
       { label: "Units Sold", value: "2,183+" },
       { label: "Average Order Value", value: "₹1,290+" }
     ],
-    overview: "GATACA is a health and wellness brand focused on providing premium nutritional supplements designed to support overall wellbeing, healthy aging, and longevity. With growing demand for wellness products on Amazon India, GATACA partnered with Arvian / Novasphere Business Solutions to strengthen its marketplace presence, improve product visibility, and accelerate sales growth. Over a 12-month engagement period, our team implemented a comprehensive Amazon growth strategy focused on marketplace management, listing optimization, advertising performance, and continuous account monitoring.",
+    overview: "GATACA is a health and wellness brand focused on providing premium nutritional supplements designed to support overall wellbeing, healthy aging, and longevity. With growing demand for wellness products on Amazon India, GATACA partnered with Novasphere Innovations to strengthen its marketplace presence, improve product visibility, and accelerate sales growth. Over a 12-month engagement period, our team implemented a comprehensive Amazon growth strategy focused on marketplace management, listing optimization, advertising performance, and continuous account monitoring.",
     snapshot: [
       { label: "Client", value: "GATACA" },
       { label: "Industry", value: "Health & Wellness Supplements" },
