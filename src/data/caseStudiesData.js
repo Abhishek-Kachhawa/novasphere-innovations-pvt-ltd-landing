@@ -186,16 +186,7 @@ export const PORTFOLIO_ITEMS = [
 ];
 
 export const TRUSTED_BRANDS = [
-  { name: "Amazon India", logoText: "amazon", type: "Marketplace" },
-  { name: "Flipkart", logoText: "Flipkart", type: "Marketplace" },
-  { name: "Myntra", logoText: "Myntra", type: "Marketplace" },
-  { name: "Blinkit", logoText: "blinkit", type: "Quick Commerce" },
-  { name: "Zepto", logoText: "zepto", type: "Quick Commerce" },
   { name: "Meesho", logoText: "meesho", type: "Marketplace" },
-  { name: "Shopify", logoText: "shopify", type: "D2C Platform" },
-  { name: "Swiggy Instamart", logoText: "instamart", type: "Quick Commerce" },
-  { name: "Ajio", logoText: "AJIO", type: "Fashion" },
-  { name: "Nykaa", logoText: "NYKAA", type: "Beauty" },
-  { name: "Tata Cliq", logoText: "TATA CLiQ", type: "Enterprise" },
-  { name: "JioMart", logoText: "JioMart", type: "Retail" }
+  { name: "Amazon India", logoText: "amazon", type: "Marketplace" },
+  { name: "Flipkart", logoText: "Flipkart", type: "Marketplace" }
 ];

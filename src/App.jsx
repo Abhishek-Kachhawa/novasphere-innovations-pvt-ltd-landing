@@ -8,23 +8,23 @@ import StickyActions from './components/layout/StickyActions';
 import Hero from './components/sections/Hero';
 import GrowthStats from './components/sections/GrowthStats';
 import AboutUs from './components/sections/AboutUs';
-import BrandMarquee from './components/sections/BrandMarquee';
+// import BrandMarquee from './components/sections/BrandMarquee'; // Commented out per request
 import ServicesGrid from './components/sections/ServicesGrid';
 import ProductListingHygiene from './components/sections/ProductListingHygiene';
 import WhyChooseUs from './components/sections/WhyChooseUs';
 import IndustryVerticals from './components/sections/IndustryVerticals';
 import LocationAdvantage from './components/sections/LocationAdvantage';
-import CaseStudies from './components/sections/CaseStudies';
+// import CaseStudies from './components/sections/CaseStudies'; // Commented out per request
 import Testimonials from './components/sections/Testimonials';
 import FAQSection from './components/sections/FAQSection';
 import ContactForm from './components/sections/ContactForm';
 
 // Dedicated Full Page Views
-import PortfolioView from './components/sections/PortfolioView';
-import BlogView from './components/sections/BlogView';
+// import PortfolioView from './components/sections/PortfolioView'; // Commented out per request
+// import BlogView from './components/sections/BlogView'; // Commented out per request
 import CareersView from './components/sections/CareersView';
 import ServiceDetailPage from './components/views/ServiceDetailPage';
-import CaseStudyDetailPage from './components/views/CaseStudyDetailPage';
+// import CaseStudyDetailPage from './components/views/CaseStudyDetailPage'; // Commented out per request
 
 // Modals
 import AuditModal from './components/modals/AuditModal';
@@ -33,7 +33,7 @@ import { SERVICES_DATA } from './data/servicesData';
 import { CASE_STUDIES } from './data/caseStudiesData';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState('home'); // 'home' | 'about' | 'services' | 'service-detail' | 'case-studies' | 'case-study-detail' | 'portfolio' | 'blog' | 'careers' | 'contact'
+  const [currentView, setCurrentView] = useState('home'); // 'home' | 'about' | 'services' | 'service-detail' | 'careers' | 'contact'
   const [auditModalOpen, setAuditModalOpen] = useState(false);
   
   const [selectedService, setSelectedService] = useState(SERVICES_DATA[0]);
@@ -46,10 +46,10 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Handle case study selection & navigate to dynamic case study detail view
+  // Handle case study selection (kept for fallback)
   const handleSelectCaseStudy = (caseStudy) => {
     setSelectedCaseStudy(caseStudy);
-    setCurrentView('case-study-detail');
+    // setCurrentView('case-study-detail'); // Commented out
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -85,20 +85,22 @@ export default function App() {
           />
         )}
 
-        {/* 2. DYNAMIC CASE STUDY DETAIL PAGE */}
+        {/* 2. DYNAMIC CASE STUDY DETAIL PAGE (COMMENTED OUT) */}
+        {/*
         {currentView === 'case-study-detail' && (
           <CaseStudyDetailPage 
             caseStudy={selectedCaseStudy}
-            onBack={() => setCurrentView('case-studies')}
+            onBack={() => setCurrentView('services')}
             onOpenAudit={() => setAuditModalOpen(true)}
           />
         )}
+        */}
 
         {/* 3. DEDICATED ABOUT US PAGE */}
         {currentView === 'about' && (
           <AboutUs 
             onOpenAudit={() => setAuditModalOpen(true)} 
-            onNavigatePortfolio={() => handleNavClick('portfolio')}
+            onNavigatePortfolio={() => handleNavClick('contact')}
           />
         )}
 
@@ -113,7 +115,8 @@ export default function App() {
           </div>
         )}
 
-        {/* 5. DEDICATED CASE STUDIES PAGE */}
+        {/* 5. DEDICATED CASE STUDIES PAGE (COMMENTED OUT) */}
+        {/*
         {currentView === 'case-studies' && (
           <div className="py-6">
             <CaseStudies 
@@ -122,16 +125,21 @@ export default function App() {
             />
           </div>
         )}
+        */}
 
-        {/* 6. DEDICATED PORTFOLIO PAGE */}
+        {/* 6. DEDICATED PORTFOLIO PAGE (COMMENTED OUT) */}
+        {/*
         {currentView === 'portfolio' && (
           <PortfolioView onOpenAudit={() => setAuditModalOpen(true)} />
         )}
+        */}
 
-        {/* 7. DEDICATED BLOG PAGE */}
+        {/* 7. DEDICATED BLOG PAGE (COMMENTED OUT) */}
+        {/*
         {currentView === 'blog' && (
           <BlogView onOpenAudit={() => setAuditModalOpen(true)} />
         )}
+        */}
 
         {/* 8. DEDICATED CAREERS PAGE */}
         {currentView === 'careers' && (
@@ -158,10 +166,11 @@ export default function App() {
 
             <AboutUs 
               onOpenAudit={() => setAuditModalOpen(true)} 
-              onNavigatePortfolio={() => handleNavClick('portfolio')}
+              onNavigatePortfolio={() => handleNavClick('contact')}
             />
 
-            <BrandMarquee />
+            {/* BrandMarquee section commented out as requested */}
+            {/* <BrandMarquee /> */}
 
             <ServicesGrid 
               onSelectService={handleSelectService} 
@@ -176,10 +185,13 @@ export default function App() {
 
             <LocationAdvantage onOpenAudit={() => setAuditModalOpen(true)} />
 
+            {/* Case Studies section commented out as requested */}
+            {/*
             <CaseStudies 
               onOpenAudit={() => setAuditModalOpen(true)} 
               onSelectCaseStudy={handleSelectCaseStudy}
             />
+            */}
 
             <Testimonials />
 

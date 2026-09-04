@@ -18,7 +18,7 @@ export default function Testimonials() {
             What Our Clients Say About Us
           </h2>
           <p className="text-base text-slate-600">
-            Real feedback from 1000+ seller accounts across Amazon, Flipkart, Blinkit & Myntra.
+            Real feedback from 500+ seller accounts across Meesho, Amazon & Flipkart.
           </p>
         </div>
 

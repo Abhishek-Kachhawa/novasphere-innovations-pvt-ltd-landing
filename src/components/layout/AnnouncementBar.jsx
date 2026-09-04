@@ -4,12 +4,12 @@ import { COMPANY_INFO } from '../../data/companyInfo';
 
 export default function AnnouncementBar({ onOpenAudit }) {
   return (
-    <div className="bg-slate-950 text-slate-300 text-xs border-b border-slate-800/80">
+    <div className="bg-blue-950 text-slate-200 text-xs border-b border-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between py-2.5 gap-y-2 gap-x-4">
           
           {/* Contact Details */}
-          <div className="flex flex-wrap items-center gap-5 text-slate-300">
+          <div className="flex flex-wrap items-center gap-5 text-slate-200">
             <a 
               href={`mailto:${COMPANY_INFO.email}`} 
               className="flex items-center gap-1.5 hover:text-sky-300 transition-colors"
@@ -26,12 +26,12 @@ export default function AnnouncementBar({ onOpenAudit }) {
               <span>Call Us: <strong className="text-white font-bold">{COMPANY_INFO.phone}</strong></span>
             </a>
 
-            <div className="hidden md:flex items-center gap-1.5 text-slate-400">
+            <div className="hidden md:flex items-center gap-1.5 text-slate-300">
               <Clock className="w-3.5 h-3.5 text-slate-400" />
               <span>{COMPANY_INFO.workingHours}</span>
             </div>
 
-            <div className="hidden lg:flex items-center gap-1.5 text-slate-400">
+            <div className="hidden lg:flex items-center gap-1.5 text-slate-300">
               <MapPin className="w-3.5 h-3.5 text-sky-400" />
               <span>{COMPANY_INFO.cityHQ}</span>
             </div>
@@ -39,7 +39,7 @@ export default function AnnouncementBar({ onOpenAudit }) {
 
           {/* Quick Announcement CTA */}
           <div className="flex items-center gap-3">
-            <span className="hidden sm:inline-flex items-center gap-1.5 bg-blue-950/80 text-sky-300 px-3 py-0.5 rounded-full border border-blue-800/50 text-[11px] font-semibold">
+            <span className="hidden sm:inline-flex items-center gap-1.5 bg-blue-900/80 text-sky-300 px-3 py-0.5 rounded-full border border-blue-700/60 text-[11px] font-semibold">
               <Sparkles className="w-3 h-3 text-sky-400 animate-pulse" />
               {COMPANY_INFO.stats.salesGrowth} Avg Sales Growth Guarantee
             </span>

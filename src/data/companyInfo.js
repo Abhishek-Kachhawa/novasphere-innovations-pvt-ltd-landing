@@ -3,9 +3,11 @@ export const COMPANY_INFO = {
   brandName: "Novasphere",
   tagline: "India's #1 E-Commerce Growth Agency",
   subTagline: "Best E-Commerce Platform Service Provider & Seller Account Management",
-  description: "Novasphere Innovations offers complete seller account management for Myntra, Amazon, Flipkart, Shopify, Blinkit, Zepto & Meesho including listings, inventory, performance ads & account health.",
-  address: "C-5, 1st Floor, 80 Feet Road, Kiran Path, Shanthi Nagar, Mansarovar, Jaipur, Rajasthan 302019",
-  cityHQ: "Jaipur, Rajasthan",
+  description: "Novasphere Innovations offers complete seller account management for Meesho, Amazon, & Flipkart including listings, inventory, performance ads & account health.",
+  address: "Vijay Nagar, Scheme 54 PU4, Indore, Madhya Pradesh 452010",
+  cityHQ: "Indore, Madhya Pradesh",
+  founder: "Yash Parmar",
+  coFounder: "Yash Parmar",
   email: "info@novasphereinnovation.com",
   altEmail: "info@novasphereinnovation.com",
   tollFree: "+91 92019 47498",
@@ -15,28 +17,22 @@ export const COMPANY_INFO = {
   foundedYear: "2018",
   experienceYears: "8+",
   rating: 4.9,
-  reviewCount: "1000+",
+  reviewCount: "500+",
   stats: {
-    sellersOnboarded: "1000+",
-    salesGrowth: "+340%",
-    marketplaces: "10+",
-    gmvManaged: "₹50Cr+",
+    sellersOnboarded: "500+",
+    salesGrowth: "+150%",
+    marketplaces: "3 Key Marketplaces",
+    gmvManaged: "₹10Cr+",
     clientRetention: "98%",
     brandsServed: "500+"
   },
   servingCities: [
-    { name: "Jaipur", region: "Headquarters", highlight: "Primary Hub" },
-    { name: "Delhi NCR", region: "North India", highlight: "Fashion & Electronics Hub" },
-    { name: "Surat", region: "Gujarat", highlight: "Textile & Apparel Capital" },
-    { name: "Meerut", region: "Uttar Pradesh", highlight: "Sports & Goods Hub" },
-    { name: "Kolkata", region: "East India", highlight: "Retail & FMCG Center" },
-    { name: "Ludhiana", region: "Punjab", highlight: "Hosiery & Manufacturing" }
+    { name: "Indore", region: "Headquarters", highlight: "Primary Hub" }
   ],
   certifications: [
     "Amazon Service Provider Network (SPN)",
     "Flipkart Preferred Seller Partner",
-    "Shopify Certified Experts",
-    "Blinkit Quick Commerce Partner",
-    "Google Ads & Meta Certified Partner"
+    "Meesho Preferred Growth Partner",
+    "E-Commerce Ads & Performance Certified"
   ]
 };

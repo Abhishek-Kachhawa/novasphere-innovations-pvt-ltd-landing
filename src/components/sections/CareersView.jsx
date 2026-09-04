@@ -3,6 +3,7 @@ import {
   MapPin, ArrowRight, CheckCircle2, 
   ChevronDown, Mail, Phone, Sparkles 
 } from 'lucide-react';
+import { COMPANY_INFO } from '../../data/companyInfo';
 
 export default function CareersView() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -12,9 +13,9 @@ export default function CareersView() {
       id: "ecomm-mgr",
       title: "eCommerce Account Manager",
       type: "Full-Time",
-      location: "📍 Jaipur, Rajasthan",
+      location: "📍 Indore, Madhya Pradesh",
       responsibilities: [
-        "Manage marketplace accounts across Amazon, Flipkart, Myntra, Ajio, and other platforms",
+        "Manage seller accounts across Meesho, Amazon, and Flipkart",
         "Drive sales growth and account performance",
         "Optimize product listings and catalog management",
         "Coordinate with clients and internal teams",
@@ -23,14 +24,14 @@ export default function CareersView() {
       requirements: [
         "Experience in eCommerce marketplace management",
         "Strong analytical and communication skills",
-        "Knowledge of Amazon Seller Central and marketplace operations"
+        "Knowledge of seller central panels and marketplace operations"
       ]
     },
     {
       id: "gst-intern",
       title: "GST Intern",
       type: "Internship",
-      location: "📍 Jaipur, Rajasthan",
+      location: "📍 Indore, Madhya Pradesh",
       responsibilities: [
         "Assist with GST filings and compliance",
         "Support accounting and taxation activities",
@@ -47,16 +48,16 @@ export default function CareersView() {
       id: "digital-mktg-intern",
       title: "Digital Marketing Intern",
       type: "Internship",
-      location: "📍 Jaipur, Rajasthan",
+      location: "📍 Indore, Madhya Pradesh",
       responsibilities: [
-        "Assist with social media marketing",
+        "Assist with marketplace sponsored ads & marketing",
         "Support SEO and content marketing activities",
-        "Help manage advertising campaigns",
+        "Help manage advertising campaigns on Meesho, Amazon, & Flipkart",
         "Research industry trends and competitors"
       ],
       requirements: [
-        "Interest in Digital Marketing",
-        "Basic understanding of social media platforms",
+        "Interest in Digital Marketing & E-Commerce",
+        "Basic understanding of online platforms",
         "Strong communication skills"
       ]
     }
@@ -66,7 +67,7 @@ export default function CareersView() {
     "Hands-On Industry Experience",
     "Growth-Focused Work Environment",
     "Learning & Development Opportunities",
-    "Exposure to Leading eCommerce Marketplaces",
+    "Exposure to Leading eCommerce Marketplaces (Meesho, Amazon, Flipkart)",
     "Collaborative Team Culture",
     "Career Advancement Opportunities"
   ];
@@ -80,9 +81,9 @@ export default function CareersView() {
   ];
 
   const careerFaqs = [
-    { q: "Where is Novasphere Innovations located?", a: "Our corporate office is located at C-5, 1st Floor, 80 Feet Road, Kiran Path, Shanthi Nagar, Mansarovar, Jaipur, Rajasthan 302019." },
+    { q: "Where is Novasphere Innovations located?", a: `Our corporate office is located at ${COMPANY_INFO.address}.` },
     { q: "Do you offer internships?", a: "Yes! We regularly offer internships in GST & Accounting, Digital Marketing, and eCommerce Operations with full learning & PPO opportunities." },
-    { q: "How can I apply for a job?", a: "You can apply directly by emailing your CV to info@novasphereinnovation.com or calling our HR helpline at +91 92019 47498." },
+    { q: "How can I apply for a job?", a: `You can apply directly by emailing your CV to ${COMPANY_INFO.email} or calling our HR helpline at ${COMPANY_INFO.phone}.` },
     { q: "Does Novasphere hire freshers?", a: "Yes, we welcome passionate freshers for intern and entry-level marketplace executive roles." }
   ];
 
@@ -90,9 +91,9 @@ export default function CareersView() {
     <div className="bg-white text-slate-900 min-h-screen">
       
       {/* Header Banner */}
-      <section className="py-16 bg-slate-950 text-white text-center border-b border-slate-800">
+      <section className="py-16 bg-blue-950 text-white text-center border-b border-blue-900">
         <div className="max-w-4xl mx-auto px-4 space-y-4">
-          <div className="inline-flex items-center gap-2 bg-blue-950 text-sky-300 border border-blue-800/80 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-blue-900 text-sky-300 border border-blue-700/80 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-sky-400" />
             CAREERS AT NOVASPHERE INNOVATIONS
           </div>
@@ -102,11 +103,11 @@ export default function CareersView() {
           </h1>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
-            Join a team that's helping brands scale across leading marketplaces like Amazon, Flipkart, Myntra, Ajio, and more. Whether you're an experienced professional or looking to start your career, we offer opportunities to learn, grow, and make a real impact.
+            Join a team that's helping brands scale across leading marketplaces like Meesho, Amazon, and Flipkart. Whether you're an experienced professional or looking to start your career, we offer opportunities to learn, grow, and make a real impact.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-sky-300 pt-2">
-            <span>📍 Jaipur, Rajasthan</span>
+            <span>📍 Indore, Madhya Pradesh</span>
             <span>•</span>
             <span>📈 Fast-Growing Company</span>
             <span>•</span>
@@ -156,8 +157,8 @@ export default function CareersView() {
                   </div>
 
                   <a
-                    href={`mailto:info@novasphereinnovation.com?subject=Application for ${job.title}`}
-                    className="bg-slate-950 hover:bg-blue-900 text-white font-bold text-xs px-6 py-2.5 rounded-xl transition-colors shadow-sm"
+                    href={`mailto:${COMPANY_INFO.email}?subject=Application for ${job.title}`}
+                    className="bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs px-6 py-2.5 rounded-xl transition-colors shadow-sm"
                   >
                     Apply Now
                   </a>
@@ -239,19 +240,19 @@ export default function CareersView() {
       </section>
 
       {/* Ready to Grow Contact HR Banner */}
-      <section className="py-16 bg-slate-950 text-white text-center">
+      <section className="py-16 bg-blue-950 text-white text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-4">
           <h2 className="text-3xl font-extrabold">Ready to Grow with Us?</h2>
           <p className="text-sm text-slate-300">Join a company that's helping businesses succeed in the digital marketplace.</p>
           
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-extrabold pt-2">
-            <a href="mailto:info@novasphereinnovation.com" className="flex items-center gap-2 text-sky-300 hover:text-white">
+            <a href={`mailto:${COMPANY_INFO.email}`} className="flex items-center gap-2 text-sky-300 hover:text-white">
               <Mail className="w-4 h-4" />
-              <span>info@novasphereinnovation.com</span>
+              <span>{COMPANY_INFO.email}</span>
             </a>
-            <a href="tel:9201947498" className="flex items-center gap-2 text-sky-300 hover:text-white">
+            <a href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`} className="flex items-center gap-2 text-sky-300 hover:text-white">
               <Phone className="w-4 h-4" />
-              <span>+91 92019 47498</span>
+              <span>{COMPANY_INFO.phone}</span>
             </a>
           </div>
         </div>

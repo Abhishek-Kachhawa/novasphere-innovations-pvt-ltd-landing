@@ -14,6 +14,52 @@
   }
 }
 
+/* Custom Hero Gentle Floating Motion */
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.6deg);
+  }
+}
+
+.animate-hero-float {
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+/* Animated Gradient Shadow / Aura behind Hero Image */
+@keyframes auraGlow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1) rotate(0deg);
+    filter: blur(45px);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.07) rotate(3deg);
+    filter: blur(65px);
+  }
+}
+
+.animate-aura-glow {
+  animation: auraGlow 5s ease-in-out infinite;
+}
+
+/* Floating Metric Badges Motion */
+@keyframes badgeFloatAlt {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-badge-float {
+  animation: badgeFloatAlt 4s ease-in-out infinite;
+}
+
 /* Custom Executive Navy Infinite Marquee */
 @keyframes marquee {
   0% {

@@ -8,7 +8,7 @@ export default function WhyChooseUs() {
     {
       title: "Specialization in e-commerce platforms",
       type: "Startups",
-      desc: "Official Amazon SPN, Flipkart Partner & Shopify certified experts focused on marketplace sales.",
+      desc: "Official Amazon SPN, Flipkart Partner & Meesho growth experts focused on marketplace sales.",
       icon: Award
     },
     {
@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
     {
       title: "Proven track record of increasing sales",
       type: "Agency",
-      desc: "+340% average sales growth in first 90 days with empirical GMV metric reporting.",
+      desc: "+150% average sales growth in first 90 days with empirical GMV metric reporting.",
       icon: TrendingUp
     },
     {
@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
       icon: DollarSign
     },
     {
-      title: "1000+ successful seller accounts",
+      title: "500+ successful seller accounts",
       type: "Agency",
       desc: "Proven track record managing fashion, electronics, home decor, beauty & FMCG across India.",
       icon: Users

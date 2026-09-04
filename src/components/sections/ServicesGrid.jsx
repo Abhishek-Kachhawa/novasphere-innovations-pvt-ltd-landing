@@ -3,14 +3,12 @@ import {
   SERVICE_CATEGORIES, SERVICES_DATA 
 } from '../../data/servicesData';
 import { 
-  ShoppingBag, Zap, TrendingUp, Code, FileText, LayoutGrid, 
-  ArrowRight, CheckCircle2, Sparkles, PackageCheck, Shirt, Store, 
-  Globe, Truck, Crown, Search, Palette, FileCheck 
+  ShoppingBag, Store, PackageCheck, LayoutGrid, 
+  ArrowRight, CheckCircle2, Sparkles 
 } from 'lucide-react';
 
 const iconMap = {
-  ShoppingBag, Zap, TrendingUp, Code, FileText, LayoutGrid,
-  PackageCheck, Shirt, Store, Globe, Truck, Crown, Search, Palette, FileCheck
+  ShoppingBag, Store, PackageCheck, LayoutGrid
 };
 
 export default function ServicesGrid({ onSelectService, onOpenAudit }) {
@@ -28,19 +26,19 @@ export default function ServicesGrid({ onSelectService, onOpenAudit }) {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 text-xs font-black text-blue-900 uppercase tracking-widest">
             <span className="w-6 h-[2px] bg-blue-900"></span>
-            OUR SERVICES
+            OUR CORE SERVICES
             <span className="w-6 h-[2px] bg-blue-900"></span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight">
-            Comprehensive E-Commerce Solutions for Every Platform
+            Specialized Seller Account Management
           </h2>
           <p className="text-base text-slate-600">
-            Maximise your reach and revenue with our comprehensive e-commerce solution for every platform. Whether you are selling fashion, electronics, audio, essentials, etc, we can help you.
+            Maximise your reach and revenue on India's top 3 marketplaces: <strong>Meesho, Amazon & Flipkart</strong>. We handle cataloging, listings, PPC ads, inventory forecasting & account health restoration.
           </p>
         </div>
 
         {/* Filter Category Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-10 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-10 mb-12">
           {SERVICE_CATEGORIES.map((cat) => {
             const IconComp = iconMap[cat.icon] || LayoutGrid;
             const isActive = activeCategory === cat.id;
@@ -48,9 +46,9 @@ export default function ServicesGrid({ onSelectService, onOpenAudit }) {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                   isActive
-                    ? 'bg-slate-950 text-white shadow-lg shadow-slate-950/20 scale-105'
+                    ? 'bg-blue-900 text-white shadow-lg shadow-blue-900/25 scale-105 border border-blue-700'
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                 }`}
               >
@@ -62,30 +60,30 @@ export default function ServicesGrid({ onSelectService, onOpenAudit }) {
         </div>
 
         {/* Services Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {filteredServices.map((service) => {
             const IconComponent = iconMap[service.iconName] || ShoppingBag;
             return (
               <div 
                 key={service.id}
-                className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 overflow-hidden"
+                className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 overflow-hidden"
               >
                 {/* Image Banner & Badge */}
-                <div className="relative h-48 overflow-hidden bg-slate-100">
+                <div className="relative h-52 overflow-hidden bg-slate-100">
                   <img 
                     src={service.image} 
                     alt={service.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
                   
                   {/* Badge */}
-                  <span className="absolute top-3 left-3 bg-white/95 text-slate-900 text-[11px] font-extrabold px-3 py-1 rounded-full shadow-sm">
+                  <span className="absolute top-3 left-3 bg-white/95 text-blue-950 text-[11px] font-extrabold px-3 py-1 rounded-full shadow-sm border border-slate-200">
                     {service.badge}
                   </span>
 
                   {/* Growth stat overlay */}
-                  <span className="absolute bottom-3 right-3 bg-blue-900 text-white font-black text-xs px-2.5 py-1 rounded-lg shadow">
+                  <span className="absolute bottom-3 right-3 bg-blue-900 text-white font-black text-xs px-3 py-1 rounded-lg shadow-md border border-blue-700">
                     {service.growthStat}
                   </span>
                 </div>
@@ -98,38 +96,38 @@ export default function ServicesGrid({ onSelectService, onOpenAudit }) {
                       <span>{service.platform}</span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-slate-950 group-hover:text-blue-700 transition-colors">
+                    <h3 className="text-xl font-black text-slate-950 group-hover:text-blue-900 transition-colors">
                       {service.title}
                     </h3>
 
-                    <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                    <p className="text-xs text-slate-600 leading-relaxed">
                       {service.subtitle}
                     </p>
                   </div>
 
                   {/* Feature Bullets */}
-                  <ul className="space-y-1.5 pt-2 border-t border-slate-100">
-                    {service.features.slice(0, 3).map((feat, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-xs text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-700 shrink-0" />
-                        <span className="truncate">{feat}</span>
+                  <ul className="space-y-2 pt-2 border-t border-slate-100">
+                    {service.features.slice(0, 4).map((feat, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-700 shrink-0 mt-0.5" />
+                        <span className="leading-tight">{feat}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Card Action Buttons */}
-                  <div className="pt-2 flex items-center justify-between gap-2">
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
                     <button
                       onClick={() => onSelectService(service)}
-                      className="inline-flex items-center gap-1 text-xs font-extrabold text-blue-900 hover:text-blue-700 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-extrabold text-blue-900 hover:text-blue-700 transition-colors"
                     >
-                      <span>Learn more</span>
+                      <span>Explore Service</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
 
                     <button
                       onClick={onOpenAudit}
-                      className="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1.5 rounded-xl transition-colors"
+                      className="bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition-colors shadow-xs"
                     >
                       Book Audit
                     </button>
@@ -142,20 +140,20 @@ export default function ServicesGrid({ onSelectService, onOpenAudit }) {
         </div>
 
         {/* Bottom Banner */}
-        <div className="mt-16 bg-slate-950 rounded-3xl p-8 sm:p-10 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800">
+        <div className="mt-16 bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 rounded-3xl p-8 sm:p-10 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-blue-900">
           <div className="space-y-2 text-center md:text-left">
-            <h3 className="text-2xl sm:text-3xl font-black">Ready to scale your e-commerce revenue?</h3>
+            <h3 className="text-2xl sm:text-3xl font-black">Ready to scale your Meesho, Amazon & Flipkart revenue?</h3>
             <p className="text-sm text-slate-300 max-w-xl">
-              Get an end-to-end audit report for Amazon, Flipkart, Myntra & Blinkit stores crafted by Jaipur's premier growth agency.
+              Get an end-to-end audit report for your seller account crafted by Indore's premier e-commerce growth agency.
             </p>
           </div>
 
           <button
             onClick={onOpenAudit}
-            className="shrink-0 bg-blue-600 hover:bg-blue-500 text-white font-black text-sm px-8 py-4 rounded-2xl shadow-xl transition-all hover:scale-105 flex items-center gap-2"
+            className="shrink-0 bg-blue-600 hover:bg-blue-500 text-white font-black text-sm px-8 py-4 rounded-2xl shadow-xl transition-all hover:scale-105 flex items-center gap-2 border border-blue-400/40"
           >
             <Sparkles className="w-4 h-4 text-sky-300" />
-            <span>Book Free Audit Now</span>
+            <span>Book Free Store Audit Now</span>
           </button>
         </div>
 
