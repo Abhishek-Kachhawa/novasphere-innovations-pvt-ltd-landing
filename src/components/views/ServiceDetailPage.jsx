@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ArrowLeft, CheckCircle2, Star, ShieldCheck, Sparkles, 
   ArrowRight, Phone, MessageCircle, HelpCircle, ChevronDown 
@@ -10,6 +10,19 @@ export default function ServiceDetailPage({ service, onBack, onOpenAudit, onOpen
   if (!service) return null;
 
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = service.images || [service.image];
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   const whatsappMessage = encodeURIComponent(
     `Hi Novasphere Team, I am interested in ${service.title} service for my seller account.`
@@ -115,9 +128,31 @@ export default function ServiceDetailPage({ service, onBack, onOpenAudit, onOpen
             {/* Right Card Image */}
             <div className="lg:col-span-5">
               <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-xl space-y-6">
-                <div className="relative h-56 rounded-2xl overflow-hidden">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
-                  <span className="absolute bottom-3 right-3 bg-blue-900 text-white font-black text-xs px-3 py-1 rounded-lg">
+                <div className="relative h-56 rounded-2xl overflow-hidden group">
+                  {images.map((imgSrc, idx) => (
+                    <img 
+                      key={idx}
+                      src={imgSrc} 
+                      alt={`${service.title} - ${idx + 1}`} 
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === currentImageIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} 
+                    />
+                  ))}
+                  
+                  {/* Carousel Indicators */}
+                  {images.length > 1 && (
+                    <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-20">
+                      {images.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentImageIndex(idx)}
+                          className={`w-2 h-2 rounded-full transition-all ${idx === currentImageIndex ? 'bg-white w-4' : 'bg-white/50 hover:bg-white/75'}`}
+                          aria-label={`Go to slide ${idx + 1}`}
+                        />
+                      ))}
+                    </div>
+                  )}
+
+                  <span className="absolute top-3 right-3 bg-blue-900 text-white font-black text-xs px-3 py-1 rounded-lg z-20 shadow-md">
                     {service.growthStat}
                   </span>
                 </div>

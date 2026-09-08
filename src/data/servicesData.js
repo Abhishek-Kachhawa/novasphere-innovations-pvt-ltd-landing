@@ -12,7 +12,13 @@ export const SERVICES_DATA = [
     platform: "Meesho",
     title: "Meesho Store Management",
     subtitle: "Scale your high-volume seller account with optimized low-margin catalog strategy & 0% commission growth.",
-    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80",
+    image: "/meesho_services/Pasted image.png",
+    images: [
+      "/meesho_services/Pasted image.png",
+      "/meesho_services/Pasted image (2).png",
+      "/meesho_services/Pasted image (3).png",
+      "/meesho_services/Pasted image (4).png"
+    ],
     badge: "High Volume Scale",
     growthStat: "10k+ Monthly Orders",
     iconName: "Store",
@@ -32,7 +38,12 @@ export const SERVICES_DATA = [
     platform: "Amazon",
     title: "Amazon Account Management",
     subtitle: "Dominate India's largest e-commerce platform with end-to-end store & listing optimization.",
-    image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=800&q=80",
+    image: "/amazon_services/Pasted image.png",
+    images: [
+      "/amazon_services/Pasted image.png",
+      "/amazon_services/Pasted image (2).png",
+      "/amazon_services/Pasted image (3).png"
+    ],
     badge: "Official SPN Network",
     growthStat: "+150% Avg GMV",
     iconName: "ShoppingBag",
@@ -52,7 +63,12 @@ export const SERVICES_DATA = [
     platform: "Flipkart",
     title: "Flipkart Account Management",
     subtitle: "Dominate Flipkart with strategic listings, PLA ads & real-time operational tracking.",
-    image: "https://images.unsplash.com/photo-1556742049-0a670fc8078a?auto=format&fit=crop&w=800&q=80",
+    image: "/flipkart_services/Pasted image.png",
+    images: [
+      "/flipkart_services/Pasted image.png",
+      "/flipkart_services/Pasted image (2).png",
+      "/flipkart_services/Pasted image (3).png"
+    ],
     badge: "Flipkart SPN Network",
     growthStat: "+280% Order Spike",
     iconName: "PackageCheck",

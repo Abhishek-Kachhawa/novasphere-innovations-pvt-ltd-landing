@@ -32,10 +32,13 @@ export default function Testimonials() {
               <div className="space-y-3">
                 {/* Rating stars */}
                 <div className="flex items-center gap-1">
-                  {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  {[...Array(5)].map((_, i) => (
+                    <Star 
+                      key={i} 
+                      className={`w-4 h-4 ${i < item.rating ? 'fill-amber-400 text-amber-400' : 'fill-slate-200 text-slate-200'}`} 
+                    />
                   ))}
-                  <span className="text-xs font-bold text-slate-700 ml-1">5.0</span>
+                  <span className="text-xs font-bold text-slate-700 ml-1">{item.rating.toFixed(1)}</span>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
